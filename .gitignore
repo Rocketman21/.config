@@ -1,0 +1,14 @@
+/*
+
+!.gitignore
+
+!starship.toml
+
+!/nvim
+/nvim/plugin
+
+!/alacritty
+
+!/tmux
+/tmux/*
+!/tmux/tmux.conf
