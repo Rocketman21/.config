@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	use({ 
+	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
 		config = function()
@@ -45,4 +45,21 @@ return require('packer').startup(function(use)
 	use 'alexghergh/nvim-tmux-navigation'
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  end)
+
+    use "lukas-reineke/indent-blankline.nvim"
+
+    use "lewis6991/gitsigns.nvim"
+
+	use { "ellisonleao/gruvbox.nvim" }
+
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
+
+	use "EdenEast/nightfox.nvim"
+
+	use "tpope/vim-sleuth"
+end)
