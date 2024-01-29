@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
-		-- or                            , branch = '0.1.x',
+		-- or							, branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -46,11 +46,19 @@ return require('packer').startup(function(use)
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-    use "lukas-reineke/indent-blankline.nvim"
+	use "lukas-reineke/indent-blankline.nvim"
 
-    use "lewis6991/gitsigns.nvim"
+	use "lewis6991/gitsigns.nvim"
 
 	use { "ellisonleao/gruvbox.nvim" }
+
+	require("gruvbox").setup({
+		bold = false,
+		palette_overrides = {
+			bright_yellow = "#ebc271",
+			bright_orange = "#ff9d4d",
+		},
+	})
 
 	use {
 		'numToStr/Comment.nvim',
@@ -62,4 +70,6 @@ return require('packer').startup(function(use)
 	use "EdenEast/nightfox.nvim"
 
 	use "tpope/vim-sleuth"
+
+	use 'Exafunction/codeium.vim'
 end)
