@@ -28,7 +28,7 @@ require('mason-lspconfig').setup({
       require('lspconfig').tsserver.setup({
         init_options = {
           preferences = {
-            importModuleSpecifierPreference = 'absolute',
+            importModuleSpecifierPreference = 'non-relative',
           },
         }
       })
