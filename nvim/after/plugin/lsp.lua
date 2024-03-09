@@ -29,6 +29,7 @@ require('mason-lspconfig').setup({
         init_options = {
           preferences = {
             importModuleSpecifierPreference = 'non-relative',
+            quoteStyle = 'single',
           },
         }
       })
@@ -44,6 +45,7 @@ cmp.setup({
     {name = 'path'},
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
+    {name = 'buffer'},
   },
   formatting = lsp_zero.cmp_format(),
   mapping = cmp.mapping.preset.insert({
@@ -52,4 +54,22 @@ cmp.setup({
     ['<Return>'] = cmp.mapping.confirm({ select = true }),
     ['<M-Space>'] = cmp.mapping.complete(),
   }),
+})
+
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
 })

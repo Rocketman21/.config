@@ -17,6 +17,11 @@ return require('packer').startup(function(use)
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
 
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
