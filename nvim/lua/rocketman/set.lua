@@ -32,3 +32,6 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.list = true
 vim.opt.listchars = "lead:·,trail:·,tab:--,nbsp:␣"
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
