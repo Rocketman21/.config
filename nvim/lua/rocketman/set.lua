@@ -22,13 +22,13 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 15
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,130"
 
 vim.opt.list = true
 vim.opt.listchars = "lead:·,trail:·,tab:--,nbsp:␣"
