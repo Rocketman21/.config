@@ -13,3 +13,12 @@
 !/tmux
 /tmux/*
 !/tmux/tmux.conf
+
+!/yabai
+/yabai/*
+!/yabai/yabairc
+
+!/skhd
+/skhd/*
+!/skhd/skhdrc
+!/skhd/activate_chrome.sh
