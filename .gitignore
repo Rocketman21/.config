@@ -22,3 +22,7 @@
 /skhd/*
 !/skhd/skhdrc
 !/skhd/activate_chrome.sh
+
+!/karabiner
+/karabiner/automatic_backups/*
+
