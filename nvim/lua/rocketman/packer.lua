@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
 		}
 	}
 
+	use 'mfussenegger/nvim-jdtls'
+
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
@@ -96,4 +98,6 @@ return require('packer').startup(function(use)
 			}
 		end,
 	})
+
+	use "tpope/vim-obsession"
 end)

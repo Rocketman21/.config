@@ -37,4 +37,6 @@ yabai -m config                                 \
     mouse_action2                resize         \
     mouse_drop_action            swap
 
+# yabai -m signal --add event=window_resized action="~/.config/yabai/restore_fullscreen.sh"
+
 echo "yabai configuration loaded.."
