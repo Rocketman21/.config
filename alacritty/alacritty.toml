@@ -15,4 +15,4 @@ startup_mode = "Maximized"
 x = 9
 
 [general]
-import = ["/Users/stasuz/.config/alacritty/themes/themes/gruvbox_dark.toml", "/Users/stasuz/.config/alacritty/keybindings.toml"]
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml", "~/.config/alacritty/keybindings.toml"]
