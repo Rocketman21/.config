@@ -11,6 +11,10 @@
 # sudo yabai --load-sa
 #
 
+SCREEN_INFO=$(osascript -e 'tell application "Finder" to get bounds of window of desktop')
+SCREEN_WIDTH=$(echo $SCREEN_INFO | cut -d',' -f3)
+SCREEN_HEIGHT=$(echo $SCREEN_INFO | cut -d',' -f4)
+
 # global settings
 yabai -m config                                 \
     external_bar                 off:40:0       \
@@ -38,5 +42,15 @@ yabai -m config                                 \
     mouse_drop_action            swap
 
 # yabai -m signal --add event=window_resized action="~/.config/yabai/restore_fullscreen.sh"
+
+yabai -m rule --add app="^Системные настройки$" manage=off
+
+yabai -m rule --add app="^Alacritty$" manage=off
+yabai -m signal --add event=window_created \
+    action=" \
+    if [ \"\$(yabai -m query --windows --window | jq -r '.app')\" = 'Alacritty' ]; then \
+        yabai -m window --move abs:25:60; \
+        yabai -m window --resize abs:$((SCREEN_WIDTH-50)):$((SCREEN_HEIGHT-120)); \
+    fi"
 
 echo "yabai configuration loaded.."
