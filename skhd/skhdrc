@@ -73,7 +73,7 @@
 # System Shortcuts
 ctrl - 3 : ~/.config/skhd/activate_chrome.sh
 ctrl - 4 : open -a Alacritty
-ctrl - 5 : osascript -e 'tell application "System Events" to set frontmost of the first process whose name is "Albion Online Client" to true'
+# ctrl - 5 : osascript -e 'tell application "System Events" to set frontmost of the first process whose name is "Albion Online Client" to true'
 
 # ############################################################### #
 # THE FOLLOWING SECTION CONTAIN SIMPLE MAPPINGS DEMONSTRATING HOW #
