@@ -23,6 +23,14 @@
 !/skhd/skhdrc
 !/skhd/activate_chrome.sh
 
+!/aerospace
+/aerospace/*
+!/aerospace/aerospace.toml
+
+!/borders
+/borders/*
+!/borders/bordersrc
+
 !/karabiner
 /karabiner/automatic_backups/*
 

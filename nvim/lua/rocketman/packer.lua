@@ -71,8 +71,6 @@ return require('packer').startup(function(use)
 
 	use "tpope/vim-sleuth"
 
-	use 'Exafunction/codeium.vim'
-
 	use {
 		'numToStr/Comment.nvim',
 		config = function()
