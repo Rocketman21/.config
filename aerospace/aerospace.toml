@@ -326,5 +326,9 @@ automatically-unhide-macos-hidden-apps = false
     run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
+    if.app-name-regex-substring = 'Pixelmator'
+    run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
     if.app-id = 'com.apple.finder'
     run = 'layout floating'

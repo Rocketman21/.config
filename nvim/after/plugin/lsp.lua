@@ -73,3 +73,36 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
+function import_identifier_under_cursor()
+  local params = vim.lsp.util.make_range_params()
+  params.context = { diagnostics = vim.lsp.diagnostic.get_line_diagnostics() }
+  
+  vim.lsp.buf_request(0, 'textDocument/codeAction', params, function(err, result, ctx)
+    if err then
+      print("LSP error:", err)
+      return
+    end
+
+    if result and #result > 0 then
+      -- Предполагаем, что первое действие является нужным (это может варьироваться в зависимости от LSP)
+      local action = result[1]
+
+      if action.edit or type(action.command) == "table" then
+        if action.edit then
+          vim.lsp.util.apply_workspace_edit(action.edit)
+        end
+        if type(action.command) == "table" then
+          vim.lsp.buf.execute_command(action.command)
+        end
+      else
+        vim.lsp.buf.execute_command(action)
+      end
+    else
+      print("No import actions available for the identifier.")
+    end
+  end)
+end
+
+vim.api.nvim_set_keymap('n', '<M-i>', '<Cmd>lua import_identifier_under_cursor()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-i>', '<Cmd>lua import_identifier_under_cursor()<CR>', { noremap = true, silent = true })
