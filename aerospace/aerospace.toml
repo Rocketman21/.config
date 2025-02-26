@@ -109,6 +109,12 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-k = 'focus up'
     ctrl-l = 'focus right'
 
+    # To be compatible with alacritty mode
+    ctrl-alt-h = 'focus left'
+    ctrl-alt-j = 'focus down'
+    ctrl-alt-k = 'focus up'
+    ctrl-alt-l = 'focus right'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     ctrl-shift-h = 'move left'
     ctrl-shift-j = 'move down'
@@ -194,10 +200,10 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-semicolon = 'mode service'
 
 [mode.alacritty.binding]
-    alt-h = 'focus left'
-    alt-j = 'focus down'
-    alt-k = 'focus up'
-    alt-l = 'focus right'
+    ctrl-alt-h = 'focus left'
+    ctrl-alt-j = 'focus down'
+    ctrl-alt-k = 'focus up'
+    ctrl-alt-l = 'focus right'
 
     ctrl-alt-shift-h = 'move left'
     ctrl-alt-shift-j = 'move down'
