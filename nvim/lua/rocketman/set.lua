@@ -1,5 +1,9 @@
 vim.opt.guicursor = ""
 
+vim.opt.keymap = "russian-jcukenwin"
+vim.opt.iminsert = 0
+vim.opt.imsearch = 0
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
