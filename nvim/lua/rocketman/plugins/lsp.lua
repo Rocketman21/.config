@@ -47,6 +47,26 @@ return {
             }
           })
         end,
+        rust_analyzer = function()
+          require('lspconfig').rust_analyzer.setup({
+            settings = {
+              ['rust-analyzer'] = {
+                diagnostics = {
+                  enable = true,
+                  experimental = {
+                    enable = true,
+                  },
+                },
+                checkOnSave = {
+                  command = "clippy", -- или "check"
+                },
+              },
+            },
+            flags = {
+              allow_incremental_sync = true,
+            },
+          })
+        end,
       }
     })
 

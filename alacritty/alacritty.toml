@@ -7,7 +7,7 @@ y = 4
 
 [window]
 decorations = "buttonless"
-opacity = 0.9
+opacity = 1.0
 blur = true
 option_as_alt = "Both"
 startup_mode = "Maximized"
@@ -16,4 +16,5 @@ startup_mode = "Maximized"
 x = 9
 
 [general]
-import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml", "~/.config/alacritty/keybindings.toml"]
+#import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml", "~/.config/alacritty/keybindings.toml"]
+import = ["~/.config/alacritty/themes/themes/ayu_dark.toml", "~/.config/alacritty/keybindings.toml"]
