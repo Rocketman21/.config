@@ -324,6 +324,10 @@ automatically-unhide-macos-hidden-apps = false
     run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
+    if.app-id = 'org.qutebrowser.qutebrowser'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
     if.app-id = 'org.alacritty'
     run = 'move-node-to-workspace 4'
 

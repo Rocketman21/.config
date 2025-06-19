@@ -53,3 +53,11 @@ vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>:wincmd p<CR>", { noremap =
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
 -- end)
+
+vim.keymap.set("n", "<leader>e'", "ciw'<C-r>\"'<Esc>", { desc = "Wrap word in 'single quotes'" })
+vim.keymap.set("n", "<leader>e\"", "ciw\"<C-r>\"\"<Esc>", { desc = "Wrap word in \"double quotes\"" })
+vim.keymap.set("n", "<leader>e`", "ciw`<C-r>\"`<Esc>", { desc = "Wrap word in `back quotes`" })
+vim.keymap.set("n", "<leader>e[", "ciw[ <C-r>\" ]<Esc>", { desc = "Wrap word in [ brackets ]" })
+vim.keymap.set("n", "<leader>e(", "ciw(<C-r>\")<Esc>", { desc = "Wrap word in (braces)" })
+vim.keymap.set("n", "<leader>e{", "ciw{ <C-r>\" }<Esc>", { desc = "Wrap word in { curly braces }" })
+vim.keymap.set("n", "<leader>ep", "ciw({ <C-r>\" })<Esc>", { desc = "Wrap word in ({ function parameter braces })" })
