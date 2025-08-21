@@ -5,6 +5,50 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Second shorcuts for VLC",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.videolan\\.vlc$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "spacebar" },
+                                "to": [{ "key_code": "k" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.videolan\\.vlc$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "left_arrow" },
+                                "to": [{ "key_code": "j" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.videolan\\.vlc$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "right_arrow" },
+                                "to": [{ "key_code": "l" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Control + c => Escape",
                         "enabled": false,
                         "manipulators": [
