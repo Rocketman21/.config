@@ -50,9 +50,16 @@
                     },
                     {
                         "description": "Control + c => Escape",
-                        "enabled": false,
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^md\\.obsidian$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
