@@ -40,6 +40,8 @@ vim.opt.listchars = "lead:·,trail:·,tab:--,nbsp:␣"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.winborder = 'single'
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

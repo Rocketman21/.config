@@ -10,7 +10,9 @@ decorations = "buttonless"
 opacity = 0.8
 blur = true
 option_as_alt = "Both"
-startup_mode = "Maximized"
+# startup_mode = "Maximized"
+dimensions = { columns = 262, lines = 65 }
+position = { x = 700, y = 265 }
 
 [window.padding]
 x = 9
