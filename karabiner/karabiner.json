@@ -5,6 +5,39 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "shit+lmb to delete in FCP",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.FinalCut$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [],
+                                        "optional": []
+                                    },
+                                    "pointing_button": "button3"
+                                },
+                                "to": [
+                                    {
+                                        "modifiers": [],
+                                        "pointing_button": "button1"
+                                    },
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": []
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Second shorcuts for VLC",
                         "manipulators": [
                             {
@@ -231,6 +264,14 @@
                         "vendor_id": 1133
                     },
                     "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 50503,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false
                 }
             ],
             "name": "Default profile",
