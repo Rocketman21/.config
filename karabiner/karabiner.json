@@ -271,7 +271,7 @@
                         "product_id": 50503,
                         "vendor_id": 1133
                     },
-                    "ignore": false
+                    "ignore_vendor_events": true
                 }
             ],
             "name": "Default profile",

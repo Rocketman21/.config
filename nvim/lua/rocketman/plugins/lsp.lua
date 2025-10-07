@@ -51,6 +51,7 @@ return {
           require('lspconfig').rust_analyzer.setup({
             settings = {
               ['rust-analyzer'] = {
+                cargo = { features = { "dev" } },
                 diagnostics = {
                   enable = true,
                   experimental = {

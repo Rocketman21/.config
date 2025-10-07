@@ -1,0 +1,94 @@
+{
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "D"
+    }
+  ],
+  "editor:delete-paragraph": [],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Mod",
+        "Alt"
+      ],
+      "key": "ArrowLeft"
+    },
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "O"
+    }
+  ],
+  "app:go-forward": [
+    {
+      "modifiers": [
+        "Mod",
+        "Alt"
+      ],
+      "key": "ArrowRight"
+    },
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "I"
+    }
+  ],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "C"
+    }
+  ],
+  "workspace:previous-tab": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "Tab"
+    },
+    {
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ],
+      "key": "["
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Tab"
+    },
+    {
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ],
+      "key": "]"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ]
+}
