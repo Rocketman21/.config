@@ -31,44 +31,37 @@ return {
     require('mason').setup({})
     require('mason-lspconfig').setup({
       ensure_installed = {'ts_ls', 'rust_analyzer'},
-      handlers = {
-        lsp_zero.default_setup,
-        lua_ls = function()
-          local lua_opts = lsp_zero.nvim_lua_ls()
-          require('lspconfig').lua_ls.setup(lua_opts)
-        end,
-        ts_ls = function()
-          require('lspconfig').ts_ls.setup({
-            init_options = {
-              preferences = {
-                importModuleSpecifierPreference = 'non-relative',
-                quoteStyle = 'single',
-              },
-            }
-          })
-        end,
-        rust_analyzer = function()
-          require('lspconfig').rust_analyzer.setup({
-            settings = {
-              ['rust-analyzer'] = {
-                cargo = { features = { "dev" } },
-                diagnostics = {
-                  enable = true,
-                  experimental = {
-                    enable = true,
-                  },
-                },
-                checkOnSave = {
-                  command = "clippy", -- или "check"
-                },
-              },
-            },
-            flags = {
-              allow_incremental_sync = true,
-            },
-          })
-        end,
+    })
+
+    vim.lsp.config('lua_ls', lsp_zero.nvim_lua_ls())
+
+    vim.lsp.config('ts_ls', {
+      init_options = {
+        preferences = {
+          importModuleSpecifierPreference = 'non-relative',
+          quoteStyle = 'single',
+        },
       }
+    })
+
+    vim.lsp.config('rust_analyzer', {
+      settings = {
+        ['rust-analyzer'] = {
+          cargo = { features = { "dev" } },
+          diagnostics = {
+            enable = true,
+            experimental = {
+              enable = true,
+            },
+          },
+          checkOnSave = {
+            command = "clippy", -- или "check"
+          },
+        },
+      },
+      flags = {
+        allow_incremental_sync = true,
+      },
     })
 
     local cmp = require('cmp')
