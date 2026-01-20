@@ -54,9 +54,7 @@ return {
               enable = true,
             },
           },
-          checkOnSave = {
-            command = "clippy", -- или "check"
-          },
+          -- checkOnSave = true,
         },
       },
       flags = {
