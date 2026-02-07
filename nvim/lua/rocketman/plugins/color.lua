@@ -16,19 +16,23 @@ function ColorMyPencil(color)
           [vim.diagnostic.severity.ERROR] = "MyDiagnosticError",
         },
     })
+
+    vim.api.nvim_set_hl(0, "TreesitterContextSeparator", {
+        link = "WinSeparator",
+    })
 end
 
 return  {
-	'ellisonleao/gruvbox.nvim',
-	config = function()
-		require("gruvbox").setup({
-			bold = false,
-			palette_overrides = {
-				bright_yellow = "#ebc271",
-				bright_orange = "#ff9d4d",
-			},
-		})
+    'ellisonleao/gruvbox.nvim',
+    config = function()
+        require("gruvbox").setup({
+            bold = false,
+            palette_overrides = {
+                bright_yellow = "#ebc271",
+                bright_orange = "#ff9d4d",
+            },
+        })
 
-		ColorMyPencil()
-	end,
+        ColorMyPencil()
+    end,
 }

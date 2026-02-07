@@ -3,5 +3,6 @@
   "showLineNumber": true,
   "showInlineTitle": true,
   "newFileLocation": "current",
-  "promptDelete": false
+  "promptDelete": false,
+  "openBehavior": "daily"
 }
