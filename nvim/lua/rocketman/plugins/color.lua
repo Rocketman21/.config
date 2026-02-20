@@ -24,6 +24,7 @@ end
 
 return  {
     'ellisonleao/gruvbox.nvim',
+    after = { "ibl" },
     config = function()
         require("gruvbox").setup({
             bold = false,
