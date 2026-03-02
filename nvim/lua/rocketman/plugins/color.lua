@@ -1,5 +1,5 @@
 function ColorMyPencil(color)
-    color = color or "gruvbox"
+    color = color or "evergarden" -- "gruvbox"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -23,15 +23,30 @@ function ColorMyPencil(color)
 end
 
 return  {
-    'ellisonleao/gruvbox.nvim',
-    after = { "ibl" },
+    'everviolet/nvim', name = 'evergarden',
+    -- 'ellisonleao/gruvbox.nvim',
     config = function()
-        require("gruvbox").setup({
-            bold = false,
-            palette_overrides = {
-                bright_yellow = "#ebc271",
-                bright_orange = "#ff9d4d",
+        -- require("gruvbox").setup({
+        --     bold = false,
+        --     palette_overrides = {
+        --         -- bright_yellow = "#ebc271",
+        --         -- bright_orange = "#ff9d4d",
+        --     },
+        -- })
+        require("evergarden").setup({
+            theme = {
+                -- variant = "spring",
+                -- accent = "yellow",
             },
+            overrides = function(colors)
+                return {
+                    LineNrAbove = { fg = colors.comment },
+                    LineNr = { fg = colors.lime },
+                    LineNrBelow = { fg = colors.comment },
+
+                    SpecialComment = { fg = colors.comment },
+                }
+            end,
         })
 
         ColorMyPencil()
